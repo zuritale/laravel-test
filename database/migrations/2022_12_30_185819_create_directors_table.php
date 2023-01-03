@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('directors', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->enum('gender', ['male', 'female']);
             $table->date('birthday');
             $table->timestamps();
         });

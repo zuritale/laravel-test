@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('show_id')->references('id')->on('shows');
             $table->integer('season_number');
-            $table->date('release_date');
             $table->timestamps();
         });
     }

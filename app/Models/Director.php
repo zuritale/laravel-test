@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Director extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'birthday',
+        'gender',
+        'name'
+    ];
 }

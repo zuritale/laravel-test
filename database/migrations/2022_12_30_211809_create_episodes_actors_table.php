@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('shows_actors', function (Blueprint $table) {
+        Schema::create('episodes_actors', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('show_id')->references('id')->on('shows');
+            $table->foreignId('episode_id')->references('id')->on('shows');
             $table->foreignId('actor_id')->references('id')->on('actors');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shows_actors');
+        Schema::dropIfExists('episodes_actors');
     }
 };

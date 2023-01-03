@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('genre_id')->references('id')->on('genres');
-            $table->foreignId('director_id')->references('id')->on('directors');
+            $table->date('release_date');
             $table->timestamps();
         });
     }
